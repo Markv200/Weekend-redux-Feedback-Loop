@@ -4,10 +4,17 @@ import { useHistory } from "react-router-dom";
 
 const Feeling = () => {
   const [feeling, setFeelingValue] = useState("");
+  const [error, setError] = useState(""); // State for error message
   const dispatch = useDispatch();
   const history = useHistory();
 
   const handleNext = () => {
+    if (!feeling || feeling < 1 || feeling > 5) {
+      setError("Please enter a value between 1 and 5."); // Set error message if input is invalid
+      return;
+    }
+
+    setError(""); // Clear error if input is valid
     dispatch({
       type: "SET_FEELING",
       payload: feeling,
@@ -28,6 +35,7 @@ const Feeling = () => {
         min="1"
         max="5"
       />
+      {error && <p style={{ color: "red" }}>{error}</p>}
       <button data-testid="next" onClick={handleNext}>
         Next
       </button>
