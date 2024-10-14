@@ -10,7 +10,7 @@ const Success = () => {
 
     return (
         <div>
-            <h2>Thank You!</h2>
+            <h2>Thank You!</h2>         
             <button data-testid="next" onClick={handleNewFeedback}>Leave New Feedback</button>
         </div>
     );

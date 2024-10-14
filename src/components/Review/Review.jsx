@@ -1,37 +1,3 @@
-// import React from 'react';
-// import { useSelector, useDispatch } from 'react-redux';
-// import { useHistory } from 'react-router-dom';
-// import axios from 'axios';
-
-// const Review = () => {
-//     const feedback = useSelector((state) => state);
-//     const dispatch = useDispatch();
-//     const history = useHistory();
-
-//     const handleSubmit = () => {
-//         axios.post('/api/feedback', feedback)
-//             .then(() => {
-//                 dispatch(resetFeedback());
-//                 history.push('/success');
-//             })
-//             .catch((err) => console.log('Error submitting feedback', err));
-//     };
-
-//     return (
-//         <div>
-//             <h2>Review Your Feedback</h2>
-//             <p>Feeling: {feedback.feelingStore}</p>
-//             <p>Understanding: {feedback.understandingStore}</p>
-//             <p>Support: {feedback.supportStore}</p>
-//             <p>Comments: {feedback.commentsStore}</p>
-//             <button data-testid="next" onClick={handleSubmit}>Submit</button>
-//         </div>
-//     );
-// };
-
-// export default Review;
-
-
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
@@ -72,3 +38,5 @@ const Review = () => {
 };
 
 export default Review;
+
+
