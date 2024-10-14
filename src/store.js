@@ -33,32 +33,7 @@ const commentsStore = (state = '', action) => {
     return state;
 };
 
-// Action creators for dispatching feedback
-export const setFeeling = (feeling) => ({
-    type: 'SET_FEELING',
-    payload: feeling
-});
-
-export const setUnderstanding = (understanding) => ({
-    type: 'SET_UNDERSTANDING',
-    payload: understanding
-});
-
-export const setSupport = (support) => ({
-    type: 'SET_SUPPORT',
-    payload: support
-});
-
-export const setComments = (comments) => ({
-    type: 'SET_COMMENTS',
-    payload: comments
-});
-
-export const resetFeedback = () => ({
-    type: 'RESET_FEEDBACK'
-});
-
-// Combine all feedback reducers
+// Combine reducers and create the store
 const store = createStore(
     combineReducers({
         feelingStore,
@@ -70,3 +45,5 @@ const store = createStore(
 );
 
 export default store;
+
+
